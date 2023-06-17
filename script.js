@@ -11,26 +11,35 @@ hole.addEventListener("animationiteration", () => {
     counter++;
 });
 
-setInterval(function(){
+setInterval(function () {
     var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
-    if(jumping==0){
-        character.style.top = (characterTop+3)+"px";
+    if (jumping == 0) {
+        character.style.top = characterTop + 3 + "px";
     }
-} ,10)
+    var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+    var characterT = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+    var holeTop = parseInt(window.getComputedStyle(hole).getPropertyValue("top"));
+    var cTop = -(800 - characterTop);
+    if (characterTop > 800 || (characterT <= holeTop && blockLeft < 20 && blockLeft > -200) || (blockLeft < 20 && blockLeft > -200 && (cTop < holeTop || cTop > holeTop + 250))) {
+        alert("Game over. Score: " + (counter - 1));
+        character.style.top = 100 + "px";
+        counter = 0;
+    }
+}, 10);
 
-function jump(){
+function jump() {
     jumping = 1;
     let jumpCount = 0;
-    var jumpInterval = setInterval(function(){
+    var jumpInterval = setInterval(function () {
         var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
-        if((characterTop>6)&&(jumpCount<15)){
-            character.style.top = (characterTop-5)+"px";
+        if (characterTop > 6 && jumpCount < 15) {
+            character.style.top = characterTop - 5 + "px";
         }
-        if(jumpCount>20){
+        if (jumpCount > 20) {
             clearInterval(jumpInterval);
-            jumping=0;
-            jumpCount=0;
+            jumping = 0;
+            jumpCount = 0;
         }
         jumpCount++;
-    },10);
+    }, 10);
 }
