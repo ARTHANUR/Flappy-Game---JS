@@ -8,6 +8,9 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    background-image: url(https://res.cloudinary.com/dboa7dqkl/image/upload/v1687007589/flappy%20bird%20game/46888871-624a3900-ce7f-11e8-808e_1_mhyhuh.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #block {
@@ -20,6 +23,7 @@
     background-color: black;
     position: relative;
     animation: block 2s infinite linear;
+    z-index: 2;
 }
 
 @keyframes block {
@@ -35,7 +39,11 @@
 #hole {
     width: 150px;
     height: 250px;
-    background-color: white;
+    background-image: url(https://res.cloudinary.com/dboa7dqkl/image/upload/v1687007109/flappy%20bird%20game/Group_115_tsmw2f.png);
+    background-repeat: no-repeat;
+    background-size :cover;
+    background-position: center;
+    z-index: 3;
     position: relative;
     left: 400px;
     top: -500px;
