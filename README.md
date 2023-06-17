@@ -1,6 +1,5 @@
 # Flappy Bird Game
 
-![Flappy Bird](flappy-bird.png)
 
 This project is a recreation of the classic game Flappy Bird using HTML, CSS, and vanilla JavaScript. The goal is to guide the bird through a series of pipes by tapping the screen or pressing the spacebar, avoiding collisions and earning points.
 
