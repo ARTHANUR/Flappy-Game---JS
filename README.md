@@ -14,7 +14,7 @@ See the video gameplay of the game [Here] (https://www.linkedin.com/posts/shasha
 
 ## Demo
 
-A live demo of the game can be accessed [here]([https://your-demo-link](https://flappy-bird-fg4y.onrender.com)).
+A live demo of the game can be accessed [Here]([https://your-demo-link](https://flappy-bird-fg4y.onrender.com)).
 
 ## Technologies Used
 
